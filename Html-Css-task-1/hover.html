@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        body{
+            display: flex;
+            background-color: lightgray;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card{
+            display: block;
+            width: 300px;
+            background-color: darkcyan;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 1.5s;
+        }
+        .card:hover{
+            transform:scale(1.05);
+            color: white;
+
+        }
+        button{
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            background: orange;
+            border: none;
+            transition: linear 0.1s;
+        }
+        button:hover{
+            color: white;
+            background:olivedrab
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="Campus-view-of-KDK-College-of-Engineering_Campus-View.jpg" alt="" width="140px" height="100px">
+        <h2>User_Boy</h2>
+        <p>No Information Avaiilable </p>
+        <button>Click</button>
+    </div>
+    
+</body>
+</html>

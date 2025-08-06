@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparkling Light Effect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .sparkle {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.5), transparent);
+      border-radius: 50%;
+      animation: sparkle-animation 1.5s infinite ease-in-out;
+    }
+
+    @keyframes sparkle-animation {
+      0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkle"></div>
+</body>
+</html>
