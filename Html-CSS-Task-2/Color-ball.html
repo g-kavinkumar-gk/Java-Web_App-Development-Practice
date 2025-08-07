@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour-Ball</title>
+    <style>
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow: hidden;
+        }
+        .colorChange{
+            position: inherit;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: glow 3s linear infinite,roll 3s ease-in-out infinite;
+        }
+        @keyframes glow{
+            0%{
+                box-shadow: 0 0 30px #ff00ff;
+                background: #ff00ff;
+            }
+            20%{
+                box-shadow: 0 0 30px #002fff;
+                background: #002fff;
+            }
+            40%{
+                box-shadow: 0 0 30px #00a2ff;
+                background: #00a2ff;
+            }
+            60%{
+                box-shadow: 0 0 30px #00ff62;
+                background: #00ff62;
+            }
+            80%{
+                box-shadow: 0 0 30px #eeff00;
+                background: #eeff00;
+            }
+            90%{
+                box-shadow: 0 0 30px #ff0000;
+                background: #ff0000;
+            }
+            100%{
+                box-shadow: 0 0 30px #ff00ff;
+                background: #ff00ff;
+            }
+        }
+        @keyframes roll{
+            0%{
+                transform: translateX(-110%);
+            }
+            100%{
+                transform: translateX(600%);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="colorChange"></div>
+</body>
+</html>

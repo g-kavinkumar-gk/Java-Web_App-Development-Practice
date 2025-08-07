@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2</title>
+</head>
+<Style>
+    body{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+    }
+    .mail-bg{
+        position: absolute;
+        width: 120px;
+        height: 80px;
+        background-color: rgb(207, 207, 207);
+        border-radius: 5px;
+    }
+    .mail-info{
+        position: relative;
+        margin-left: 5px;
+        height: 0px;
+        width: 90px;
+        background-color: antiquewhite;
+        transition: transform 1s linear;
+        z-index: -1;
+    }
+    .mail-box{
+        width: 120px;
+        height: 60px;
+        border-radius: 5px;
+        margin-top: -20px;
+        clip-path: polygon(0 0,50% 30%,100% 0,100% 100%,0 100%);
+        background-color: rgb(207, 207, 207);
+        position: relative;
+        z-index: 1;
+    }
+
+    /* .mail-cover-bg{
+        position: absolute;
+        justify-self: center;
+        height: 40px;
+        width: 120px;
+        background-color: pink;
+        clip-path: polygon(0 0,100% 0,50% 100%);
+        transform-origin: top;
+        z-index: -1;
+    } */
+    .mail-cover{
+        justify-self: center;
+        height: 40px;
+        width: 116px;
+        background-color: orangered;
+        clip-path: polygon(0 0,100% 0,50% 100%);
+        transform-origin: top;
+        transition: transform .4s ease-in-out;
+        z-index: 1;
+    }
+    .mail-bg:hover .mail-cover{
+        transform: rotateX(-180deg);
+    }
+    .mail-bg:hover .mail-box{
+        margin-top: -20px;
+        background-color: rgb(207, 207, 207);
+        position: relative;
+        z-index: 1;
+    }
+    .mail-bg:hover .mail-info{
+        transition-delay: .6s;
+        position: absolute;
+        margin-top: -20px;
+        margin-left: 15px;
+        height: 60px;
+        width: 90px;
+        background-color: antiquewhite;
+        transform: translateY(-60px);
+        z-index: 1;
+    }
+    
+    
+</Style>
+<body>
+    <div class="mail-bg">
+        <div class="mail-cover"></div>
+        <div class="mail-info"></div>
+        <div class="mail-box"></div>
+    </div>
+</body>
+</html>

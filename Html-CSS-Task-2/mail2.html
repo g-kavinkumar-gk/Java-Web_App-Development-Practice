@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Mail Hover Effect</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Center the envelope on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f7f7;
+  margin: 0;
+}
+
+/* Set up 3D perspective */
+.mail-container {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+/* Envelope wrapper, preserves 3D children */
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Flap on top of the envelope */
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55%;
+  background: #f1c40f;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+}
+
+/* Bottom part of the envelope body */
+.body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: #e74c3c;
+  border-top: 2px solid #c0392b;
+}
+
+/* The letter inside */
+.letter {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transform: translateY(100%);
+  transition: transform 0.6s ease 0.2s;
+  padding: 1em;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* Hover state: open flap and slide letter up */
+.mail-container:hover .flap {
+  transform: rotateX(-180deg);
+}
+
+.mail-container:hover .letter {
+  transform: translateY(0%);
+}
+
+  </style>
+</head>
+<body>
+  <div class="mail-container">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="body"></div>
+      <div class="letter">
+        <p>Dear User,</p>
+        <p>This is your mail!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance party</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(95, 247, 247);
+            display: block;
+            justify-items: center;
+            align-items: center;
+        }
+        .dancer{
+            font-size: 90px;
+            animation: dance 2s ease-in-out infinite;
+            transform-origin:bottom center;
+        }
+        .stage{
+            width: 100;
+            display: flex;
+        }
+        .hall{
+            display: flex;
+            letter-spacing: 10px;
+        }
+        .odience:nth-child(even){
+            font-size: 80px;
+            animation: jump 1s alternate-reverse infinite;
+        }
+        .odience{
+            font-size: 80px;
+            animation: jump 1s both infinite;
+        }
+        @keyframes dance{
+            0%{
+                transform: rotate(0deg),translateY(0);
+            }
+            60%{
+                transform: rotateY(200deg);
+            }
+        }
+        @keyframes jump{
+            0%{
+                transform: translateY(0);
+            }
+            60%{
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="dancer"><p>&#x1F483;</p></div>
+        <div class="dancer"><p>&#x1F483;</p></div>
+    </div >
+    <hr>
+    <div class="hall">
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+    </div>
+        <div class="hall">
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+        <div class="odience"><p>🧍‍♂️</p></div>
+    </div>
+</body>
+</html>
