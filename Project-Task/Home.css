@@ -1,0 +1,307 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(219, 219, 219,0.4);
+}
+/*  nav-bar block */
+/* ============================================================================ */
+
+nav{
+    margin: 0;
+    position:static;
+    width: inherit;
+    height:60px;
+    display: flex;
+    background-color: beige;
+}
+.brand{
+    width: auto;
+    height: inherit;
+    color: rgb(122, 26, 26);
+    justify-self: center;
+    align-content: center;
+    /* background-color: aqua; */
+}
+.q_a{
+    position: relative;
+    margin-left: auto;
+    justify-self: end;
+    width: 30%;
+    display: flex;
+    /* background-color: paleturquoise; */
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+.quote {
+    width: max-content;
+    height: inherit;
+    text-align: end;
+}
+.quote p{
+    padding-right: 10px;
+    font-weight: 600;
+}
+.account{
+    width: 30%;
+    height: inherit;
+    /* background-color: aquamarine; */
+}
+.account a{
+    padding-left: 10px;
+}
+
+/* Banner block */
+/* ============================================================================ */
+
+.banner{
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    /* padding: 20px 0px; */
+    background-color: silver;
+
+}
+.banner .search-box {
+    display: flex;
+    position: absolute;
+    margin:15px 5% 0px 60%;
+    align-items: center;
+    /* background-color: #fff;
+    border: 2px solid #ccc; */
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+}
+.search-input {
+  outline: none;
+  width: 260px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  color: #000101;
+  font-weight: 600;
+  background-color:rgba(255, 255, 255, 0.7) ;
+  flex: 1;
+}
+
+.search-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  margin-left: 2px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}/* button over */
+
+
+/* Slider Container */
+/* ========================================= */
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.slides {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+.slide {
+    margin: 0;
+    width: 100%;
+    height:500px ;
+    position: relative;
+    text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.slide .text {
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+  text-align: left;
+  /* background: rgba(250, 105, 105, 0.2); */
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Trending today section */
+/* ============================================================================ */
+
+.trending{
+    width: 100%;
+    height: max-content;
+    padding: 10px 0px;
+}
+.trending h1{
+    margin-left: 20px;
+}
+.trend-content{
+    display: flex;
+    width: 80%;
+    height: max-content;
+    padding: 20px 10%;
+    justify-content: space-between;
+    /* background-color: red; */
+    align-items: center;
+
+}
+.trend-content img{
+    width: 70%;
+}
+
+.trend-content .trend-detail{
+    width: auto;
+}
+
+hr{
+    width: 90%;
+    color: black;
+}
+
+/* Most popular */
+/* ============================================================================ */
+.popular{
+    width: 90%;
+    height: max-content;
+    padding: 1% 5%;
+    justify-items: center;
+    /* background-color: #007BFF; */
+}
+
+.popular .popular-box{
+    width:inherit;
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    
+}
+.popular-box .popular-content{
+    display: flex;
+    width: 45%;
+    margin: 10px 20px ;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #91919171;
+
+}
+.popular-box .popular-content img{
+    border-radius: 10px;
+}
+
+/* All recipe section */
+/* ============================================================================ */
+
+
+.all-recipe{
+    width: 90%;
+    height: max-content;
+    padding: 5%;
+    /* background-color: aquamarine; */
+}
+.recipe-card-list{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(204, 204, 204, 0.555);
+    border-radius: 10px;
+    justify-content: space-evenly ;
+}
+.recipe-card{
+    position: relative;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: beige;
+    justify-content:center ;
+    /* align-items: center; */
+}
+.recipe-card:hover{
+    
+}
+.recipe-card img{
+    width: 80%;
+    padding: 10%;
+    border-radius: 10px;
+}
+.recipe-card-details{
+    width: 100%;
+    padding-bottom: 10%;
+    text-align : center;
+} 
+
+/* Contact */
+/* ============================================================================ */
+.contact{
+    background-color: beige;
+    border-top:3px solid black;
+}
+.contact-links{
+    width: 100%;
+    padding: 20px 0;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact-link{
+    width: 30%;
+    /* background-color: #007BFF; */
+}
+.redirects{
+    width: 12%;
+    height: 200px;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+.redirects a{
+    text-align: left;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+}
+.abouts{
+    width: 12%;
+    height: 200px;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+.abouts a{
+    text-align: left;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+}
+.auth{
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.auth a{
+    padding: 20px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <title>Welcome </title>
+  
+  <head>
+    <link rel="stylesheet" href="Prg1.css"/>
+  </head>
+  <body>
+   <div class="login-container">
+    <h2>Whimsical Culinary Chronicles</h2>
+    <form class="login-form">
+      <label><strong>Username</strong>:</label><br>
+      <input type="text" id="username" required /><br>
+      <label><strong>Password</strong>:</label><br>
+      <input type="password" id="password" required /><br><br>
+      <span id="notify"></span>
+      <!-- <a href="briy.html"> -->
+        <button type="button" onclick="login()">Sign In</button> <!--// changes <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <button type="button" onclick="login()">login</button> <!--// changes <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+      </a>
+    </form>
+  </div>
+</body>
+<script> // changes <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  function login(){
+    let name="admin";
+    let pass="admin";
+
+    let get_name=document.getElementById("username").value;
+    let get_pass=document.getElementById("password").value;
+    if(get_name==name && get_pass==pass){
+      document.getElementById("notify").innerText="Login Success";
+      window.location.href = "anotherfile.html";//rename <<<<<<<<<<<<<<<<<<<<<<<<<<<
+      return true;
+    }
+    else{
+      document.getElementById("notify").innerText="Invalid Login";
+      return false;
+    }
+
+  }
+</script>
+</html>

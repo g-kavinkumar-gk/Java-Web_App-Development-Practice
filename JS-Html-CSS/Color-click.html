@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>JAvascript</title>
+    </head>
+    <body style="text-align:center;">
+        <h2>Color Changer</h2>
+        <button onclick="changeColor()">Click Me</button>
+        <script>
+            function changeColor() {
+                let colors=["pink","blue","green","red","orange","purple","white"];
+                let random=Math.floor(Math.random() * colors.length);
+                document.body.style.backgroundColor=colors[random];
+            }
+        </script>
+    </body>
+</html>

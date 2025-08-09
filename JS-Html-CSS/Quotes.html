@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+</head>
+<body style="text-align: center;">
+    <h2>Quotes Application</h2>
+    <p id="quote"></p>
+    <button onclick="quote()">Quote Me</button>
+    <script>
+        //declared to function -- global access
+        let q=[
+            "Hack the impossible, daily.",
+            "Curiosity cracks every code.",
+            "Firewalls fear the curious.",
+            "Code. Break. Build. Repeat.",
+            "Exploit knowledge, not weakness.",
+            "Root access, earned honorably.",
+            "Think deeper, hack smarter.",
+            "Obstacles invite clever minds.",
+            "Silence speaks in binaries"];
+        //function to call    
+        function quote(){
+            let ind=Math.floor(Math.random()*q.length);
+            document.getElementById("quote").innerText=q[ind];
+        }
+        quote();//calling to run once 
+    </script>
+</body>
+</html>

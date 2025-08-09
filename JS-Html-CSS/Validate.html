@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgba(0, 0, 0, 0.363);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            padding:30px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.575);
+            font-size:18px ;
+        }
+        input{
+            width: 100%;
+            margin: 8px 0;
+            padding:10px;
+            box-sizing: border-box;
+            border: 1px groove black;
+            border-radius: 10px;
+        }
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+        .submit{
+            width: 42%;
+            padding: 10px;
+            margin: 8px 10px;
+            background-color: olivedrab;
+            opacity: 0.8;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .clear{
+            width: 42%;
+            padding: 10px;
+            margin: 8px 10px;
+            border-radius: 10px;
+            background-color: grey;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        button:hover{
+            /* background: greenyellow; */
+            opacity: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="register" onsubmit="return validate()">
+        <h3 style="justify-self: center;">Register Form</h3>
+        <label>Name</label>
+        <input type="text" id="name">
+        <div id="nameErr" class="error"></div>
+
+        <label>Email</label>
+        <input type="email" id="email">
+        <div id="emailErr" class="error"></div>
+
+        <label>Password</label>
+        <input type="password" id="pass">
+        <div id="passwordErr" class="error"></div>
+
+        <label>Confrim Password</label>
+        <input type="password" id="cpass">
+        <div id="passwordErr" class="error"></div>
+
+        <Button type="submit" class="submit">Submit</Button>
+        <Button type="reset" class="clear">Clear</Button>
+
+        <script>
+            function validate(){
+                let isValid=true;
+                document.querySelectorAll(".error").forEach(l => l.innerText=" ");
+                let name=document.getElementById("name").ariaValueMax().trim();
+                let email=document.getElementById("email").ariaValueMax().trim();
+                let pass=document.getElementById("pass").ariaValueMax().trim();
+                let cpass=document.getElementById("cpass").ariaValueMax().trim();
+                if(name === ""){
+                    document.getElementById("nameErr").innerText="Name should be Entererd";
+                    isValid=false;
+                }
+                if(!notEmailChar.test(name)){
+                    document.getElementById("nameErr").innerText="Name should be valid";
+                    isValid=false;
+                }
+                let notEmailChar=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+                if(!notEmailChar.test(email) || email === ""){
+                    document.getElementById("emailErr").innerText="Invalid Email Entered";
+                    isValid=false;                    
+                }
+                if(!(pass == cpass)){
+                    document.getElementById("passErr").innerText="Password Mismatch";
+                    isValid=false; 
+                }
+                return isvalid;
+            }
+        </script>
+    </form>
+</body>
+</html>
