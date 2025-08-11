@@ -10,17 +10,22 @@
     <!-- navigation bar -->
     <nav>
         <div class="brand">
-            <h2>Whimsical Culinary Chronicles</h2>
+            <a href="Home.html"><h2>Whimsical Culinary Chronicles</h2></a>
         </div>
         <div class="q_a">
             <div class="quote"><p>Unleash the Gastronomic Enigma</p></div>
             <span>|</span>
-            <div class="account"><a href="">User</a></div>
+            <div class="account"><a href=""><img width="32" height="32" src="https://img.icons8.com/puffy-filled/32/user.png" alt="user"/></a>
+                <!-- <div class="user-opt" >
+                    <p>Name</p>
+                    <p>Account</p>
+                </div> -->
+            </div>
         </div>
     </nav>
 
     <!-- slide banner -->
-    <div class="banner">
+    <div id="home" class="banner">
         <div class="slider">
                     <div class="search-box">
             <input type="text" placeholder="Find Your Recipe Here ... " class="search-input">
@@ -29,32 +34,42 @@
             <div class="slides">
                 <!-- Slide 1 -->
                 <div class="slide">
-                <img src="Images/Image3.jpg" alt="Image 1">
-                <div class="text">
+                <img src="Images/Banner/image3.jpg" alt="Image 1">
+                <div class="text" style="color: rgb(0, 62, 87);">
                     <h1>Heading</h1>
                     <h3>Cachey words Cachey words Cachey words </h3>
                     <p>small paragraph  paragraph <br> paragraph small</p>
-                    <a href="#">Any link</a>
+                    <a href="#">Click here</a>
                 </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="slide">
-                <img src="Images/image1.png" alt="Image 2">
-                <div class="text">
+                <div class="slide" >
+                <img src="Images/Banner/image.png" alt="Image 2">
+                <div class="text" style="color: rgb(255, 255, 255);">
                     <h1>Heading</h1>
                     <h3>Cachey words Cachey words Cachey words </h3>
                     <p>small paragraph  paragraph <br> paragraph small</p>
-                    <a href="#">Any link</a>
+                    <a href="#">Click here</a>
                 </div>
                 </div>
                 <!-- Slide 3 -->
                 <div class="slide">
-                <img src="Images/Image3.jpg" alt="Image 3">
+                <img src="Images/Banner/image4.jpg" alt="Image 3">
                 <div class="text">
                     <h1>Heading</h1>
                     <h3>Cachey words Cachey words Cachey words </h3>
                     <p>small paragraph  paragraph <br> paragraph small</p>
-                    <a href="#">Any link</a>
+                    <a href="#">Click here</a>
+                </div>
+                </div>
+                <!-- slide 4 -->
+                 <div class="slide">
+                <img src="Images/Banner/image2.jpg" alt="Image 3">
+                <div class="text">
+                    <h1>Heading</h1>
+                    <h3>Cachey words Cachey words Cachey words </h3>
+                    <p>small paragraph  paragraph <br> paragraph small</p>
+                    <a href="#">Click here</a>
                 </div>
                 </div>
             </div>
@@ -63,15 +78,16 @@
     </div>
 
     <!-- Today trending -->
-    <div class="trending">
+    <div id="trending" class="trending">
         <h1>Today's Trending</h1>
         <div class="trend-content">
-            <img src="Images/Image1.jpg" alt="trending-image">
+            <img class="trend-content-img" src="Images/Recipe/trending.jpg" alt="trending-image">
+            <div class="trend-img-text">Hello foodies ... <br> <Strong>Its delicious</Strong> </div>
             <div class="trend-detail">
                 <h1>Heading</h1>
                 <h3>Cachey words Cachey words <br> Cachey words </h3>
                 <p>small paragraph  paragraph <br> paragraph small</p>
-                <a href="#">Any link</a>
+                <a href="#">Click here</a>
             </div>
         </div>
     </div>
@@ -79,39 +95,39 @@
     <hr>
 
      <!-- Most popular -->
-    <div class="popular">
+    <div id="famous" class="popular">
         <h1>Most Popular Recipes</h1>
         <div class="popular-box">
             <div class="popular-content">
-                <img src="Images/image1.jpg" alt="">
+                <img src="Images/Recipe/famous1.jpg" alt="">
                 <div class="popular-content-detail">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <a href="#">Link</a>
+                    <a href="#">Click to view</a>
                 </div>
             </div>
             <div class="popular-content">
-                <img src="Images/image1.jpg" alt="">
+                <img src="Images/Recipe/famous2.jpg" alt="">
                 <div class="popular-content-detail">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <a href="#">Link</a>
+                    <a href="#">Click to view</a>
                 </div>
             </div>
             <div class="popular-content">
-                <img src="Images/image1.jpg" alt="">
+                <img src="Images/Recipe/famous3.jpg" alt="">
                 <div class="popular-content-detail">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <a href="#">Link</a>
+                    <a href="#">Click to view</a>
                 </div>
             </div>
             <div class="popular-content">
-                <img src="Images/image1.jpg" alt="">
+                <img src="Images/Recipe/famous4.jpg" alt="">
                 <div class="popular-content-detail">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <a href="#">Link</a>
+                    <a href="#">Click to view</a>
                 </div>
             </div>
         </div>
@@ -120,15 +136,47 @@
     <hr>
 
     <!-- All Recipes -->
-     <div class="all-recipe">
+     <div id="all-recipe" class="all-recipe">
         <h1>All Recipes</h1>
         <div class="recipe-card-list">
             <div class="recipe-card">
-                <img src="Images/image1.jpg" alt="">
+                <img src="Images/Recipe/recipe2.jpg" alt="">
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="Images/Recipe/recipe4.jpg" alt="">
+                <div class="recipe-card-details">
+                    <h3>Heading</h3>
+                    <p>paragraph paragraph <br>paragraph </p>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="Images/Recipe/recipe1.jpg" alt="">
+                <div class="recipe-card-details">
+                    <h3>Heading</h3>
+                    <p>paragraph paragraph <br>paragraph </p>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="Images/Recipe/recipe3.jpg" alt="">
+                <div class="recipe-card-details">
+                    <h3>Heading</h3>
+                    <p>paragraph paragraph <br>paragraph </p>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="Images/Recipe/recipe5.jpg" alt="">
+                <div class="recipe-card-details">
+                    <h3>Heading</h3>
+                    <p>paragraph paragraph <br>paragraph </p>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
             <div class="recipe-card">
@@ -136,7 +184,7 @@
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
             <div class="recipe-card">
@@ -144,7 +192,7 @@
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
             <div class="recipe-card">
@@ -152,7 +200,7 @@
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
             <div class="recipe-card">
@@ -160,7 +208,7 @@
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
             <div class="recipe-card">
@@ -168,39 +216,7 @@
                 <div class="recipe-card-details">
                     <h3>Heading</h3>
                     <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="Images/image1.jpg" alt="">
-                <div class="recipe-card-details">
-                    <h3>Heading</h3>
-                    <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="Images/image1.jpg" alt="">
-                <div class="recipe-card-details">
-                    <h3>Heading</h3>
-                    <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="Images/image1.jpg" alt="">
-                <div class="recipe-card-details">
-                    <h3>Heading</h3>
-                    <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="Images/image1.jpg" alt="">
-                <div class="recipe-card-details">
-                    <h3>Heading</h3>
-                    <p>paragraph paragraph <br>paragraph </p>
-                    <button>View</button>
+                    <button onClick="window.location.href='View-page.html'" >View</button>
                 </div>
             </div>
         </div>
@@ -212,27 +228,35 @@
         <div class="contact-links">
             <div class="contact-link">
                 <h3>Follow us</h3>
-                <a href="">youtube</a>
-                <a href="">instagram</a>
-                <a href="">fb</a>
-                <a href="">pinterst</a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"><radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"><path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M42,37c0,2.762 -2.238,5 -5,5h-26c-2.761,0 -5,-2.238 -5,-5v-26c0,-2.762 2.239,-5 5,-5h26c2.762,0 5,2.238 5,5z" fill="#3f83b5"></path><path d="M34.368,25h-3.368v13h-5v-13h-3v-4h3v-2.41c0.002,-3.508 1.459,-5.59 5.592,-5.59h3.408v4h-2.287c-1.609,0 -1.713,0.6 -1.713,1.723v2.277h4z" fill="#ffffff"></path></g></g></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#E60023"></circle><path fill="#FFF" d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z"></path></svg>
+                </a>
                 <div class="contact-mail">
                     <input type="text" class="contact-mail-input">
                     <button class="contact-mail-btn">Send</button>
                 </div>
             </div>
             <div class="redirects">
-                <a href="#">home</a>
-                <a href="#">All Recipe</a>
-                <a href="#">Most famous</a>
-                <a href="#">Today's Trending</a>
-                <a href="#">Kitchen Tips</a>
+                <a href="#home">Home</a>
+                <a href="#all-recipe">All Recipe</a>
+                <a href="#famous">Most famous</a>
+                <a href="#trending">Today's Trending</a>
+                <a href="Tips.html">Kitchen Tips</a>
             </div>
             <div class="abouts">
-                <a href="#">About us</a>
-                <a href="#">Magazine</a>
-                <a href="#">News</a>
-                <a href="#">career</a>
+                <a href="Tips.html">About us</a>
+                <a href="Tips.html">Magazine</a>
+                <a href="Tips.html">News</a>
+                <a href="Tips.html">Career</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms & Conditions</a>
             </div>
@@ -246,17 +270,31 @@
 </body>
 <script>
     let currentIndex = 0;
-
+//slide function
         function moveSlides() {
         const slides = document.querySelector('.slides');
         const totalSlides = document.querySelectorAll('.slide').length;
 
         currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
-        slides.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+        slides.style.transform = `translateX(-${currentIndex * 25}%)`;
         }
 
                     // Change slide every 3 seconds
-        setInterval(moveSlides, 2000);
+        setInterval(moveSlides, 2600);
 //slide function
+
+// JavaScript for search functionality
+    const searchInput = document.getElementById('searchInput');
+    const itemList = document.getElementById('itemList');
+    const items = itemList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function() {
+      const filter = searchInput.value.toLowerCase();
+      for (let i = 0; i < items.length; i++) {
+        const text = items[i].textContent || items[i].innerText;
+        items[i].style.display = text.toLowerCase().includes(filter) ? '' : 'none';
+      }
+    });
+// JavaScript for search functionality
 </script>
 </html>
