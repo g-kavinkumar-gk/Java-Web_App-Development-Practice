@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Android</title>
+
+    <style>
+        body{
+            margin: 0;
+            width: 100%;
+            display: block;
+            height: max-content;
+            justify-items: center;
+        }
+        .main{
+            height: 500px;
+            width: 80%;
+            border: 1px solid black;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* left: 400px; */
+            top: 20px;
+        }
+        .head{
+            height: 120px;
+            width: 200px;
+            border-radius: 100px 100px 0px 0px;
+            background-color: palegreen;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+
+        }
+        .eyes{
+            height:25px;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .eye1{
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+            background-color: rgb(24, 2, 2);
+            
+            
+        }
+        .eye2{
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+            background-color: rgb(24, 2, 2);
+            
+            
+        }
+        .con1{
+            height: 200px;
+            width: 280px;
+            padding-top: 10px;
+            display: flex;
+        
+            justify-content: space-between;
+
+        }
+        .lefthand{
+            height: 150px;
+            width: 30px;
+            border-radius: 10px 10px 10px 10px;
+            background-color: palegreen;
+            
+            
+        }
+        .body{
+            height: 200px;
+            width: 200px;
+            border-radius: 20px 20px 90px 90px;
+            background-color: palegreen;
+        }
+        .righthand{
+            height: 150px;
+            width: 30px;
+            border-radius: 10px 10px 10px 10px;
+            background-color: palegreen;
+        }
+        .con2{
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+        }
+        .legleft{
+            position: relative;
+            bottom: 20px;
+            height: 110px;
+            width: 40px;
+            border-radius: 15px 15px 15px 15px;
+            background-color: palegreen;
+
+        }
+        .legright{
+            position: relative;
+            bottom: 20px;
+            height: 110px;
+            width: 40px;
+            border-radius: 15px 15px 15px 15px;
+            background-color: palegreen;
+        }
+        .main:hover .head{
+            animation: width 2s ease 1s infinite;
+        }
+        @keyframes width{
+            0%{
+                width:200px;
+            }
+            50%{
+                width: 250px;
+            }
+            100%{
+                width:200px;
+            }
+        }
+        .main:hover .eyes{
+            animation:transform 2s ease 1s infinite ;
+        }
+        @keyframes transform{
+            0%{
+                transform: translate(0px);
+            }
+            50%{
+                transform: translate(-30px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
+        .main:hover .body{
+        animation:rotate-body 2s ease 1s infinite;
+        }
+        @keyframes rotate-body{
+            0%{
+                rotate: 0deg;
+                border-radius: 20px 20px 90px 90px;
+            }
+            50%{
+                rotate: 360deg;
+                border-radius: 90px 90px 90px 90px;
+            }
+            100%{
+                rotate: 0deg;
+                border-radius: 20px 20px 90px 90px;
+            }
+        }
+
+        .main:hover .lefthand {
+        animation: rotate-lefthand 2s ease 1s infinite forwards;
+        }
+        @keyframes rotate-lefthand {
+        0% { 
+            rotate: 0px; 
+            transform-origin: top center;
+        }
+        50%{ 
+            rotate: 90deg; 
+            transform-origin: top center;
+        }
+        100%{
+            rotate: 0px; 
+            transform-origin: top center;
+        }
+        }
+        .main:hover .righthand {
+        animation: rotate-righthand 2s ease 1s infinite forwards;
+        }
+        @keyframes rotate-righthand {
+        0% {
+            rotate: 0px;
+            transform-origin: top center;
+            }
+        50%{ 
+            rotate: -90deg;
+            transform-origin: top center;
+        }
+        100%{
+            rotate: 0px;
+            transform-origin: top center;
+        }
+        }
+
+        .main:hover .legleft {
+        animation: rotate-legleft 2s ease 1s infinite forwards;
+        }
+        @keyframes rotate-legleft {
+        0% { 
+            rotate: 0px; 
+            transform-origin: top center;
+        }
+        50%{ 
+            rotate: 50deg; 
+            transform-origin: top center;
+        }
+        100%{
+            rotate: 0px; 
+            transform-origin: top center;
+        }
+        }
+        .main:hover .legright {
+        animation: rotate-legright 2s ease 1s infinite forwards;
+        }
+        @keyframes rotate-legright {
+        0% {
+            rotate: 0px;
+            transform-origin: top center;
+            }
+        50%{ 
+            rotate: -50deg;
+            transform-origin: top center;
+        }
+        100%{
+            rotate: 0px;
+            transform-origin: top center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Dancing Robat</h1></center>
+    <div class="main">
+        <div class="head">
+            <div class="eyes">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
+            </div>
+        </div>
+        <div class="con1">
+            <div class="lefthand"></div>
+            <div class="body"></div>
+            <div class="righthand"></div>
+        </div>
+        <div class="con2">
+            <div class="legleft"></div>
+            <div class="legright"></div>
+        </div>
+    </div>
+
+</body>
+</html>

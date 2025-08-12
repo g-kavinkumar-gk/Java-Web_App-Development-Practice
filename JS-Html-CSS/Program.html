@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program-in-JS</title>
+    <h1>guess the number game</h1>
+    <input type="text" id="num" value="" placeholder="0">
+    <p id="result"></p>
+    <button onclick="check()">click to check</button>
+</head>
+<body>
+</body>
+<script>
+    document.write("Vanakkam da mapla.\n Rasipurathula irundhu");
+    //program starts here
+    function check(){
+        const val=document.getElementById("num").value;
+        let res="";
+        if(val>10){
+            res="Number is Bigger";
+        }
+        else if(val<10){
+            res="Number is Smaller";
+        }
+        else if(val==0){
+            res="You win"
+        }
+        else{
+            res="Invlaid input"
+        }
+        document.getElementById("result").innerText=res;
+        // message timeout function
+        setTimeout(function() {
+            const message = document.getElementById('result');
+            if (message) {
+                message.innerText="";
+                // message.style.display = 'none'; // Hide the message
+            }}, 3000);
+    }
+</script>
+</html>
