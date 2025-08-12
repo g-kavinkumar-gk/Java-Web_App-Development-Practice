@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Simple card using Js</title>
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: url('game_pic.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                padding-top:30px ;
+                color: tan;
+            }
+            h1{
+                text-shadow: navajowhite;
+            }
+            button{
+                padding: 10px 15px;
+                font-size: 16px;
+                margin: 5px;
+                cursor: pointer;
+                background-color: rgb(42, 211, 211);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                transition: .3s ease;
+            }
+            button:hover{
+                background-color: rgb(247, 34, 236);
+            }
+            #cartItm{
+                background-color: paleturquoise;
+                padding: 15px;
+                font-size: 25;
+                margin:20px auto;
+                border-radius: 8px;
+                box-shadow:0 2px 5px black ;
+                text-align: left;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shopping Cart</h1>
+        <div>
+            <h2>Products</h2><p>click to add</p>
+            <button onclick="cart.addproduct('Candy')">Candy</button>
+            <button onclick="cart.addproduct('Fruits')">Fruits</button>
+            <button onclick="cart.addproduct('Soft-Drinks')">Soft-Drinks</button>
+            <button onclick="cart.addproduct('Vegies')">Vegies</button>
+        </div>
+        <hr>
+        <button onclick="cart.clearCart()">Clear Cart</button>
+        <div id="cartItm">
+            <center><h3>Products in Cart</h3></center>
+            <ul id="cartList"></ul>
+        </div>
+    </body>
+    <script>
+        let cart={
+            product:[],
+            addproduct:function(product){
+                this.product.push(product);
+                this.showCart();
+            },
+            showCart:function(){
+                let cartList=document.getElementById("cartList");
+                cartList.innerHTML="";
+                this.product.forEach(function(pdt){
+                    let list=document.createElement("li");
+                    list.textContent=pdt;
+                    cartList.appendChild(list);
+                });
+            },
+            clearCart:function(){
+                this.product=[];
+                this.showCart();
+            }
+        };
+    </script>
+</html>
