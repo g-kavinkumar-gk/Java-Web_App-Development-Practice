@@ -88,12 +88,16 @@
             border: 2px solid white;
             border-radius: 5px;
         }
-        .Incredients ul{
-            width:100% ;
+        .incredients ul{
+            width:50% ;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
+        .incredients li{
+            margin: 10px;
+            padding:10px 10px 10px 0;
+        } 
         button{
             background-color: #FF7043;
             margin: 20px;
@@ -103,7 +107,7 @@
             padding: 12px 24px;
             font-size: 16px;
             cursor: pointer;
-            transition: all 0.3s ease-in;
+            transition: all step-end;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         button:hover{
@@ -129,13 +133,14 @@
 
         <!-- content -->
         <div class="content">
-            <img src="Images/Recipe/recipe2.jpg" alt="">
+            <!-- <div id="image-container"></div> -->
+            <img id="image-container" src="" alt="">
             <h2>Name of the recipe</h2>
             <div class="description" >
                 <h3>About the Recipe</h3>
                 <p>paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph <br> paragraph paragraph paragraph</p>
             </div>
-            <div class="Incredients">
+            <div class="incredients">
                 <h3>Incredients</h3>
                 <ul>
                     <li>product</li>
@@ -144,6 +149,12 @@
                     <li>product</li>
                     <li>product</li>
                     <li>product</li>
+                    <li>product</li>
+                    <li>product</li>
+                    <li>product</li>
+                    <li>product</li>
+                    <li>product</li>
+
                 </ul>
             </div>
             <div class="instruction">
@@ -160,6 +171,27 @@
         </div>
         <p>Adhuku 20 rup kudu...</p>
         <p></p>
-        <button class="culinary-button" onclick="history.back();"><-Go Back</button>
+        <button class="culinary-button" onclick="history.back();"><~ Go Back</button>
     </body>
+    <script>
+        // Utility function to get query parameter value by name
+        function getQueryParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+        const imgSrc = getQueryParam('img');
+        // const container = document.getElementById('image-container');
+
+        if (imgSrc) {
+            const img=document.getElementById("image-container")
+            // const img = document.createElement('img');
+            img.src = imgSrc;
+            // img.style.maxWidth = '90%';
+            // img.style.height = 'auto';
+            img.alt = 'Opened Image';
+            // container.appendChild(img);
+        } else {
+            container.textContent = "No image source provided in URL.";
+        }
+    </script>
 </html>
