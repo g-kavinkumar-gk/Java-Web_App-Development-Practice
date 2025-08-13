@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Fan-Task></Fan-Task></title>
+    <style>
+        body{
+            margin: 0;
+            width: 100%;
+            height: 600px;
+            justify-items: center;
+            align-content: center;
+            background-color: aliceblue;
+        }
+        #fan-box{
+            width: 400px;
+            height: 400px;
+            /* background-color: aquamarine; */
+
+            animation-duration: 2s;
+            /* animation: spin linear; */
+            transform-origin: inherit;
+            animation-name: spin;
+            animation-timing-function: linear;
+            animation-iteration-count:infinite;
+        }
+        .top-wing{
+            width: 300px;
+            height: 175px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            /* background-color: yellowgreen; */
+        }
+        .wing1{
+            width: 30px;
+            height: 115px;
+            margin-bottom: 60px;
+            border-radius: 50%;
+            justify-self: center;
+            background-color: brown;
+        }
+        .fan-head{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            /* margin-left: -2px; */
+            border-radius: 50%;
+            justify-self: center;
+            align-self: center;
+            background-color: brown;
+        }
+        .down-wing{
+            width: 300px;
+            height: 200px;
+            margin-top: 50px;
+            /* padding-top: 50px; */
+            display: flex;
+            justify-self: center;
+            justify-content: space-between;
+            /* background-color: yellowgreen; */
+        }
+        .wing2{
+            width: 30px;
+            height: 120px;
+            border-radius: 50%;
+            transform: rotate(60deg);
+            background-color: brown;
+        }
+        .wing3{
+            width: 30px;
+            height: 120px;
+            transform: rotate(-60deg);
+            border-radius: 50%;
+            transform: translate(-20px,-10px,10px);
+            background-color: brown;
+        }
+        .buttons{
+            padding: 50px;
+        }
+        @keyframes spin {
+            0%{
+                transform-origin: inherit;
+                transform: rotate();
+            }
+            10%{
+                transform: rotate(36deg);
+            }
+            20%{
+                transform: rotate(72deg);
+            }
+            40%{
+                transform: rotate(144deg);
+            }
+            60%{
+                transform: rotate(216deg);
+            }
+            80%{
+                transform: rotate(288deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="fan-box">
+        <div class="top-wing">
+            <div class="wing1"></div>
+        </div>
+        <div class="fan-head"></div>
+        <div class="down-wing">
+            <div class="wing2"></div>
+            <div class="wing3"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="setSpeed(0)" id="btn-off">Turn-off</button>
+        <button onclick="setSpeed(1.7)" id="btn1">Speed 1</button>
+        <button onclick="setSpeed(1.2)" id="btn2">Speed 2</button>
+        <button onclick="setSpeed(.9)" id="btn3">Speed 3</button>
+        <button onclick="setSpeed(.6)" id="btn4">Speed 4</button>
+        <button onclick="setSpeed(0.4)" id="btn5">Speed 5</button>
+    </div>
+</body>
+<script>
+    function setSpeed(n){
+        document.getElementById("fan-box").style.animationDuration=n+"s";
+    }
+    setSpeed(0);
+</script>
+</html>
